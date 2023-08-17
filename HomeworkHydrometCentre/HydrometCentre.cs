@@ -14,7 +14,7 @@ namespace HomeworkHydrometCentre
         { 
             for (int i = 0; i < temperatureInformation.Length; i++)
             {
-                if (temperatureInformation[i].date == null)
+                if (temperatureInformation[i].Date == null)
                 {
                     temperatureInformation[i] = new TemperatureInformation(date, C, F, K);
                     break;
@@ -26,12 +26,9 @@ namespace HomeworkHydrometCentre
         {
             for (int i = 0;i < temperatureInformation.Length; i++)
             {
-                if (temperatureInformation[i].date == date)
+                if (temperatureInformation[i].Date == date)
                 {
-                    temperatureInformation[i].date = null;
-                    temperatureInformation[i].C = 0;
-                    temperatureInformation[i].F = 0;
-                    temperatureInformation[i].K = 0;
+                    temperatureInformation[i] = new TemperatureInformation();
                     break;
                 }
             }
@@ -41,7 +38,7 @@ namespace HomeworkHydrometCentre
         {
             for (int i = 0; i < temperatureInformation.Length ; i++)
             {
-                if (temperatureInformation[i].date == null)
+                if (temperatureInformation[i].Date == null)
                 {
                     Console.WriteLine("...");
                 }
@@ -56,7 +53,7 @@ namespace HomeworkHydrometCentre
         {
             for (int i = 0;i < temperatureInformation.Length; i++)
             {
-                if (temperatureInformation[i].date == date)
+                if (temperatureInformation[i].Date == date)
                 {
                     temperatureInformation[i].GetInfo();
                 }

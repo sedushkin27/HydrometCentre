@@ -4,22 +4,22 @@ namespace HomeworkHydrometCentre
 {
     struct TemperatureInformation
     {
-        public string date { get; set; }
+        public string Date { get; set; }
         public double C { get; set; }
         public double F { get; set; }
         public double K { get; set; }
 
-        public TemperatureInformation(string date, double C, double F, double K) 
+        public TemperatureInformation(string date, double c, double f, double k) 
         { 
-            this.date = date;
-            this.C = C;
-            this.F = F;
-            this.K = K;
+            Date = date;
+            C = c;
+            F = f;
+            K = k;
         }
 
         public void GetInfo() 
         {
-            Console.WriteLine($"for the date {date} has been recorded in Celsius: {C}, Forringeit: {F} and Kelvin: {K}.");
+            Console.WriteLine($"for the date {Date} has been recorded in Celsius: {C}, Forringeit: {F} and Kelvin: {K}.");
         }
 
     }
